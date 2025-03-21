@@ -204,7 +204,7 @@ public class LightController implements View.OnClickListener {
     private class ServerThread extends Thread {
         private final int color;
         private final int position;
-        private final Handler handler = new Handler(); // Assurez-vous que "handler" est bien défini
+        private final Handler handler = new Handler();
 
         ServerThread(int color, int position) {
             this.color = color;
@@ -236,17 +236,12 @@ public class LightController implements View.OnClickListener {
                 Log.d("DEVLOG", "Envoi : " + message);
                 writer.println(message);
 
-                try {
-                    // Gestion de l'interruption potentielle tant que le serveur n'a pas répondu
-                    while (!reader.ready()) {
-                        Thread.sleep(500);
-                    }
-                    // Lecture du résultat
-                    String result = reader.readLine();
-                    Log.d("DEVLOG", result);
-                } catch (InterruptedException e) {
-                    Log.e("ServerThread", "Erreur de lecture", e);
-                }
+                // Attente du message renvoyé par le serveur
+                while (!reader.ready());
+
+                // Lecture du résultat
+                String result = reader.readLine();
+                Log.d("DEVLOG", result);
 
                 socket.close();
             } catch (IOException e) {

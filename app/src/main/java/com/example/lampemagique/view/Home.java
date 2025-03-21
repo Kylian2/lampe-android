@@ -66,10 +66,6 @@ public class Home extends AppBase{
         Log.d("LIFELINE", "Home Created - onCreate");
     }
 
-    public void setLightsColors(){
-
-    }
-
     /* Log demandés dans le cours */
 
     protected void onStart(){

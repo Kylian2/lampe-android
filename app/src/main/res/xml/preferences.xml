@@ -5,6 +5,8 @@
         android:title="Composante des couleurs"
         android:defaultValue="true" />
 
+    <!-- On pourrait définir ici les paramètres mais cela provoque un affichage dans le
+    fragment de préférence.
     <Preference
         android:key="@string/preset1"
         android:title="Couleur 1"
@@ -18,5 +20,5 @@
     <Preference
         android:key="@string/preset3"
         android:title="Couleur 3"
-        android:defaultValue="-12826941"/>
+        android:defaultValue="-12826941"/>-->
 </PreferenceScreen>

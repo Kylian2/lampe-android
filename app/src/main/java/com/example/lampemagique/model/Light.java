@@ -7,9 +7,9 @@ import androidx.core.content.ContextCompat;
 import com.example.lampemagique.R;
 
 public class Light {
-    private int red = 100;
-    private int green = 100;
-    private int blue = 100;
+    private int red;
+    private int green;
+    private int blue;
 
     private boolean state;
 
