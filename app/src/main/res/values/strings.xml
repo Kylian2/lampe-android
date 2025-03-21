@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">lampemagique</string>
+    <string name="plusRouge">+ ROUGE</string>
+    <string name="minusRouge">- ROUGE</string>
+    <string name="plusVert">+ VERT</string>
+    <string name="minusVert">- VERT</string>
+    <string name="plusBlue">+ BLEU</string>
+    <string name="minusBlue">- BLEU</string>
+    <string name="rouge">Rouge</string>
+    <string name="vert">Vert</string>
+    <string name="bleu">Bleu</string>
+    <string name="eteinte">Eteinte</string>
+    <string name="commencer_avec_la_couleur">Commencer avec la couleur :</string>
+    <string name="author">By Kylian Richard - IUT d\'Orsay</string>
+    <string name="title">Lampe Magique</string>
+    <string name="param_tres">Paramètres</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="COLOR_COMPONENT">COLOR_COMPONENT</string>
+    <string name="settings_1">Afficher les composantes de la couleur</string>
+</resources>
