@@ -4,4 +4,19 @@
         android:key="@string/COLOR_COMPONENT"
         android:title="Composante des couleurs"
         android:defaultValue="true" />
+
+    <Preference
+        android:key="@string/preset1"
+        android:title="Couleur 1"
+        android:defaultValue="-1371076"/>
+
+    <Preference
+        android:key="@string/preset2"
+        android:title="Couleur 2"
+        android:defaultValue="-11817136"/>
+
+    <Preference
+        android:key="@string/preset3"
+        android:title="Couleur 3"
+        android:defaultValue="-12826941"/>
 </PreferenceScreen>

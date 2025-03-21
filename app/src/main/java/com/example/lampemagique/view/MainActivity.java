@@ -82,6 +82,11 @@ public class MainActivity extends AppBase{
         int green = getIntent().getIntExtra(MainActivity.GREEN, 100);
         int blue = getIntent().getIntExtra(MainActivity.BLUE, 100);
 
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this.getApplicationContext());
+        this.color1.setBackgroundColor(preferences.getInt(this.getString(R.string.preset1), HomeController.DEFAULT_1));
+        this.color2.setBackgroundColor(preferences.getInt(this.getString(R.string.preset2), HomeController.DEFAULT_2));
+        this.color3.setBackgroundColor(preferences.getInt(this.getString(R.string.preset3), HomeController.DEFAULT_3));
+
         controller.setColor(red, green, blue);
 
         if (savedInstanceState != null) {
@@ -99,6 +104,8 @@ public class MainActivity extends AppBase{
         }else{
             controller.setState(true);
         }
+
+        controller.applyColor();
 
 
         Log.d("LIFELINE", "Main Activity Created - onCreate");

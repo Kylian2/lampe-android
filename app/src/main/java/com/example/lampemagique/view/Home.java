@@ -25,6 +25,11 @@ public class Home extends AppBase{
 
     private HomeController controller;
 
+    private Button first;
+    private Button second;
+    private Button third;
+    private Button off;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
@@ -41,16 +46,28 @@ public class Home extends AppBase{
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Lampe Magique");
 
-        Button first = findViewById(R.id.first);
+        first = findViewById(R.id.first);
         first.setOnClickListener(controller);
-        Button second = findViewById(R.id.second);
+        second = findViewById(R.id.second);
         second.setOnClickListener(controller);
-        Button third = findViewById(R.id.third);
+        third = findViewById(R.id.third);
         third.setOnClickListener(controller);
-        Button off = findViewById(R.id.off);
+        off = findViewById(R.id.off);
         off.setOnClickListener(controller);
 
+        int color1 = controller.getPreset1();
+        int color2 = controller.getPreset2();
+        int color3 = controller.getPreset3();
+
+        first.setBackgroundColor(color1);
+        second.setBackgroundColor(color2);
+        third.setBackgroundColor(color3);
+
         Log.d("LIFELINE", "Home Created - onCreate");
+    }
+
+    public void setLightsColors(){
+
     }
 
     /* Log demandés dans le cours */

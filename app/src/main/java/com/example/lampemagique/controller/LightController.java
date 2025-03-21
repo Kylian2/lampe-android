@@ -1,5 +1,6 @@
 package com.example.lampemagique.controller;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Handler;
 import android.os.Looper;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 
 import androidx.core.content.ContextCompat;
+import androidx.preference.PreferenceManager;
 
 import com.example.lampemagique.R;
 import com.example.lampemagique.model.Light;
@@ -53,6 +55,7 @@ public class LightController implements View.OnClickListener {
     }
 
     public void applyColor(){
+        Log.d("DEVLOG", model.getColor()+"color");
         mainActivity.setColor(model.getColor());
     }
 
@@ -91,20 +94,18 @@ public class LightController implements View.OnClickListener {
             setState(true);
         }
         if(v.getId() == R.id.color1){
-            model.setColor(ContextCompat.getColor(mainActivity, R.color.color1));
-            mainActivity.setColor(model.getColor());
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(mainActivity.getApplicationContext());
+            model.setColor(preferences.getInt(mainActivity.getString(R.string.preset1), HomeController.DEFAULT_1));
             setState(true);
         }
-
         if(v.getId() == R.id.color2){
-            model.setColor(ContextCompat.getColor(mainActivity, R.color.color2));
-            mainActivity.setColor(model.getColor());
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(mainActivity.getApplicationContext());
+            model.setColor(preferences.getInt(mainActivity.getString(R.string.preset2), HomeController.DEFAULT_2));
             setState(true);
         }
-
         if(v.getId() == R.id.color3){
-            model.setColor(ContextCompat.getColor(mainActivity, R.color.color3));
-            mainActivity.setColor(model.getColor());
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(mainActivity.getApplicationContext());
+            model.setColor(preferences.getInt(mainActivity.getString(R.string.preset3), HomeController.DEFAULT_3));
             setState(true);
         }
         if(v.getId() == R.id.light){

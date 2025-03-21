@@ -30,4 +30,7 @@
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="COLOR_COMPONENT">COLOR_COMPONENT</string>
     <string name="settings_1">Afficher les composantes de la couleur</string>
+    <string name="preset1">preset1</string>
+    <string name="preset2">preset2</string>
+    <string name="preset3">preset3</string>
 </resources>
