@@ -6,4 +6,21 @@
         android:title="@string/param_tres"
         android:orderInCategory="100"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/save1"
+        android:title="@string/save1"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/save2"
+        android:title="@string/save2"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/save3"
+        android:title="@string/save3"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
 </menu>

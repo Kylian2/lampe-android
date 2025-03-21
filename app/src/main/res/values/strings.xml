@@ -6,9 +6,6 @@
     <string name="minusVert">- VERT</string>
     <string name="plusBlue">+ BLEU</string>
     <string name="minusBlue">- BLEU</string>
-    <string name="rouge">Rouge</string>
-    <string name="vert">Vert</string>
-    <string name="bleu">Bleu</string>
     <string name="eteinte">Eteinte</string>
     <string name="commencer_avec_la_couleur">Commencer avec la couleur :</string>
     <string name="author">By Kylian Richard - IUT d\'Orsay</string>
@@ -33,4 +30,10 @@
     <string name="preset1">preset1</string>
     <string name="preset2">preset2</string>
     <string name="preset3">preset3</string>
+    <string name="save1">Enregistrer dans le preset 1</string>
+    <string name="save3">Enregistrer dans le preset 3</string>
+    <string name="save2">Enregistrer dans le preset 3</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
 </resources>

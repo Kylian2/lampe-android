@@ -142,6 +142,10 @@ public class LightController implements View.OnClickListener {
         return model.getBlue();
     }
 
+    public int getColor() {
+        return model.getColor();
+    }
+
     private class LightThread extends Thread{
         public void run() {
             try {

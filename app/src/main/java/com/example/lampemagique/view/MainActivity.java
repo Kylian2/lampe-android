@@ -1,9 +1,11 @@
 package com.example.lampemagique.view;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -121,6 +123,39 @@ public class MainActivity extends AppBase{
         outState.putInt(GREEN, green);
         outState.putInt(BLUE, blue);
         controller.setColor(red, green, blue);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, SettingsActivity.class);
+            startActivity(intent);
+            return true;
+        }
+        if(id == R.id.save1){
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt(this.getString(R.string.preset1), controller.getColor());
+            color1.setBackgroundColor(controller.getColor());
+            editor.apply();
+        }
+        if(id == R.id.save2){
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt(this.getString(R.string.preset2), controller.getColor());
+            color2.setBackgroundColor(controller.getColor());
+            editor.apply();
+        }
+        if(id == R.id.save3){
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt(this.getString(R.string.preset3), controller.getColor());
+            color3.setBackgroundColor(controller.getColor());
+            editor.apply();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void setColor(int color){
