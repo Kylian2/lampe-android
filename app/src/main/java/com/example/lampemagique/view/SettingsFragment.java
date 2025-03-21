@@ -10,7 +10,6 @@ import androidx.preference.SwitchPreference;
 import com.example.lampemagique.R;
 
 public class SettingsFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener {
-    //TODO : Créer l'interface graphique du fragment et le connecter à la page de paramètre
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.preferences, rootKey);
